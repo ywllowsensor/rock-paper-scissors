@@ -31,58 +31,38 @@ function getComputerChoice() {
 //take the players choice//
 //use switch to come up with different case scenarios where smtg beats smtg//
 //use toLowerCase() for plaer and comp selection//
-//ssssssssssssssssssssssssssssssssssssss//
 
 function playOneRound(playerSelection, computerSelection) {
-    let player = playerSelection.toLowerCase();
-    let computer = computerSelection.toLowerCase();
-    const OneRound = playOneRound();
 
-    switch (OneRound) {
-        case 1:
-            if (player === 'rock' && computer === 'scissors') {
-                return 'You Win! Rock beats Scissors'
-            }
-            break;
-        case 2:
-            if (player === 'scissors' && computer === 'paper') {
-                return 'You Win! Scissors beats Paper'
-            }
-            break;
-        case 3:
-            if (player === 'paper' && computer === 'rock') {
-                return 'You Win! Paper beats Rock'
-            }
-            break;
-        case 4:
-            if (player === 'scissors' && computer === 'rock') {
-                return 'You Lose! Rock beats Scissors'
-            }
-            break;
-        case 5:
-            if (player === 'rock' && computer === 'paper') {
-                return 'You Lose! Paper beats Rock'
-            }
-            break;
-        case 6:
-            if (player === 'paper' && computer === 'scissors') {
-                return 'You Lose! Scissors beats paper'
-            }
-            break;
-        case 7:
-            if (player === 'rock' && computer === 'rock' || player === 'paper' && computer === 'paper' || player === 'scissors' && computer === 'scissors') {
-                return 'It"s a draw! Try again'
-            }
-    }
+    let player = playerSelection.toLowerCase();
+    console.log(player)
+    let computer = computerSelection.toLowerCase();
+    console.log(computer)
+
+    if (player === 'rock' && computer === 'scissors') {
+        return 'You Win! Rock beats Scissors';
+    } else if (player === 'scissors' && computer === 'paper') {
+        return 'You Win! Scissors beats Paper';
+    } else if (player === 'paper' && computer === 'rock') {
+        return 'You Win! Paper beats Rock';
+    } else if (player === 'scissors' && computer === 'rock') {
+        return 'You Lose! Rock beats Scissors';
+    } else if (player === 'rock' && computer === 'paper') {
+        return 'You Lose! Paper beats Rock';
+    } else if (player === 'paper' && computer === 'scissors') {
+        return 'You Lose! Scissors beats paper';
+    } else if (player === 'rock' && computer === 'rock' || player === 'paper' && computer === 'paper' || player === 'scissors' && computer === 'scissors') {
+        return 'It"s a draw! Try again';
+        }
 }
 
-const playerSelection = 'rock'
+const playerSelection = 'scissors'
 const computerSelection = getComputerChoice();
 console.log(playOneRound(playerSelection,computerSelection))
 
-function game() {
+/*function game() {
     let i = playOneRound();
     for (let i = 0; i < 5; i++) {
         console.log()
     }
-}
+}*/
