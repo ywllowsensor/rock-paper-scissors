@@ -35,9 +35,7 @@ function getComputerChoice() {
 function playOneRound(playerSelection, computerSelection) {
 
     let player = playerSelection.toLowerCase();
-    console.log(player)
     let computer = computerSelection.toLowerCase();
-    console.log(computer)
 
     if (player === 'rock' && computer === 'scissors') {
         return 'You Win! Rock beats Scissors';
@@ -53,16 +51,19 @@ function playOneRound(playerSelection, computerSelection) {
         return 'You Lose! Scissors beats paper';
     } else if (player === 'rock' && computer === 'rock' || player === 'paper' && computer === 'paper' || player === 'scissors' && computer === 'scissors') {
         return 'It"s a draw! Try again';
-        }
+    } else {
+        return 'Type in rock, paper or scissors.';
+    }
 }
 
-const playerSelection = 'scissors'
+const playerSelection = prompt ('Rock, paper, or scissors. Choose wisely.')
 const computerSelection = getComputerChoice();
-console.log(playOneRound(playerSelection,computerSelection))
 
-/*function game() {
-    let i = playOneRound();
+function game() {
     for (let i = 0; i < 5; i++) {
-        console.log()
+        playOneRound(playerSelection,computerSelection);
+        console.log(playOneRound(playerSelection,computerSelection))
     }
-}*/
+}
+
+console.log(game());
