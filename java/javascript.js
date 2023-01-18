@@ -56,11 +56,10 @@ function playOneRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = prompt ('Rock, paper, or scissors. Choose wisely.')
-const computerSelection = getComputerChoice();
-
 function game() {
     for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt ('Rock, paper, or scissors. Choose wisely.');
+        const computerSelection = getComputerChoice();
         playOneRound(playerSelection,computerSelection);
         console.log(playOneRound(playerSelection,computerSelection))
     }
