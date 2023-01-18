@@ -1,13 +1,3 @@
-//The computer will generate a random choice between rock, paper or scissors//
-//The function that tells the computer to do so is called getComputerChoice//
-//How do I tell the computer to randomly pick between three strings?//
-
-//Math.random() tells a computer to choose between 0 and 1 randomly//
-
-//Assign values of 1 to 3 to each choice and use Math.random to choose a random number between 1 and 3//
-
-//the number choses will correspond to the choice of rock or paper etc//
-//computer will return the choice in the consile//
 
 'use strict';
 
@@ -22,15 +12,6 @@ function getComputerChoice() {
         return 'Scissors';
     }
 }
-
-//the computer will take note of the players choice and the computers choice//
-
-//how do i get the players choice?//
-
-//the computer will evaluate the choices and tell the player who won//
-//take the players choice//
-//use switch to come up with different case scenarios where smtg beats smtg//
-//use toLowerCase() for plaer and comp selection//
 
 function playOneRound(playerSelection, computerSelection) {
 
